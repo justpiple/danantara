@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daya Anagata Nusantara - Danantara Indonesia</title>
+  <meta name="description"
+    content="Lembaga Pengelola Investasi Daya Anagata Nusantara (DANANTARA) - Mendorong investasi dan transformasi ekonomi Indonesia.">
+  <meta name="keywords"
+    content="Badan Pengelola Investasi, BPI, Daya Anagata Nusantara, Danantara, Muliaman Hadad, Badan Investasi">
+
+  <meta property="og:title" content="Daya Anagata Nusantara - Danantara">
+  <meta property="og:description"
+    content="Lembaga Pengelola Investasi Daya Anagata Nusantara (DANANTARA) - Mendorong investasi dan transformasi ekonomi Indonesia.">
+  <meta property="og:url" content="https://danantara.id">
+  <meta property="og:image" content="https://danantara.id/cover.jpeg">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daya Anagata Nusantara - Danantara">
+  <meta name="twitter:description"
+    content="Lembaga Pengelola Investasi Daya Anagata Nusantara (DANANTARA) - Mendorong investasi dan transformasi ekonomi Indonesia.">
+  <meta name="twitter:image" content="https://danantara.id/cover.jpeg">
+
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.21/dist/lenis.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#de1b25',
+            secondary: '#1c1c1e',
+            dark: '#121214',
+            light: '#f8f8f8',
+            accent: '#B91C1C',
+            darkred: '#7f1d1d'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          },
+          height: {
+            '128': '32rem',
+            '144': '36rem',
+          },
+          spacing: {
+            '72': '18rem',
+            '84': '21rem',
+            '96': '24rem',
+          },
+          screens: {
+            '3xl': '1920px',
+          },
+          animation: {
+            'gradient': 'gradient 8s ease infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-position': '0% 50%'
+              },
+              '50%': {
+                'background-position': '100% 50%'
+              },
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased overflow-x-hidden">
+  <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+    <div class="relative">
+      <svg width="100" height="100" viewBox="0 0 100 100" class="preloader__logo">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#de1b25" stroke-width="2"></circle>
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#222" stroke-width="2" stroke-dasharray="283"
+          stroke-dashoffset="283" class="preloader__progress-ring"></circle>
+      </svg>
+      <img src="assets/danantara-logo-black-v2.png" alt="Danantara Logo"
+        class="absolute w-16 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    </div>
+  </div>
+
+  <div class="header__flag-line">
+    <div class="header__flag-red"></div>
+    <div class="header__flag-white"></div>
+  </div>
+
+  <header id="header" class="header fixed top-0 w-full z-40 transition-all duration-500">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#" class="group z-10 flex items-center">
+          <div class="header__logo-container transition-all duration-300 transform group-hover:scale-105">
+            <img src="assets/danantara-logo-black-v2.png" alt="Danantara Logo" class="header__logo-image">
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-8" aria-label="Navigation">
+          <a href="#about-us" class="header__nav-link">Tentang Kami</a>
+          <a href="#journey" class="header__nav-link">Perjalanan</a>
+          <a href="#visi-misi" class="header__nav-link">Visi & Misi</a>
+          <a href="#footer" class="header__nav-link">Kontak</a>
+
+          <div class="flex items-center ml-6 space-x-6 border-l pl-6 header__lang-selector">
+            <div class="flex items-center space-x-2 cursor-pointer opacity-100 header__lang-active">
+              <span class="text-sm font-medium">ID</span>
+              <img src="assets/id-logo.c9499420.svg" alt="Bahasa Indonesia" class="w-6 h-6">
+            </div>
+            <div
+              class="flex items-center space-x-2 cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-300">
+              <span class="text-sm font-medium">EN</span>
+              <img src="assets/en-logo.31a47fe0.svg" alt="English" class="w-6 h-6">
+            </div>
+          </div>
+        </nav>
+
+        <button class="header__menu-toggle lg:hidden z-20" aria-label="Toggle Menu">
+          <span class="header__menu-toggle-bar"></span>
+          <span class="header__menu-toggle-bar"></span>
+          <span class="header__menu-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="header__mobile-menu">
+      <div class="header__mobile-menu-inner">
+        <nav class="flex flex-col items-center space-y-6 text-2xl font-medium" aria-label="Navigation">
+          <a href="#about-us" class="header__mobile-link" style="--index: 1;">Tentang Kami</a>
+          <a href="#journey" class="header__mobile-link" style="--index: 2;">Perjalanan</a>
+          <a href="#visi-misi" class="header__mobile-link" style="--index: 3;">Visi & Misi</a>
+          <a href="#footer" class="header__mobile-link" style="--index: 4;">Kontak</a>
+        </nav>
+        <div class="flex items-center mt-12 space-x-8">
+          <div class="flex items-center space-x-2 cursor-pointer">
+            <span class="text-base font-medium">ID</span>
+            <img src="assets/id-logo.c9499420.svg" alt="Bahasa Indonesia" class="w-6 h-6">
+          </div>
+          <div class="flex items-center space-x-2 text-gray-400 cursor-pointer hover:text-gray-800 transition-colors">
+            <span class="text-base font-medium">EN</span>
+            <img src="assets/en-logo.31a47fe0.svg" alt="English" class="w-6 h-6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero relative h-screen flex items-center">
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-10"></div>
+        <img src="assets/hero-children-indo.png" alt="Children of Indonesia"
+          class="w-full h-full object-cover hero__image">
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-5xl">
+          <h2 class="text-white text-xl md:text-2xl mb-4 font-medium hero__subtitle">DANANTARA INDONESIA</h2>
+          <h1 class="text-white text-5xl md:text-7xl font-serif font-bold hero__title leading-tight mb-8">
+            Daya Anagata<br> Nusantara
+          </h1>
+          <p class="text-white text-xl md:text-3xl hero__tagline">
+            "Untuk Kemakmuran Indonesia"
+          </p>
+
+          <div class="mt-12">
+            <a href="#about-us" class="hero__btn group opacity-0">
+              <span class="hero__btn-text">Jelajahi</span>
+              <span class="hero__btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="transform group-hover:translate-y-1 transition-transform">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator">
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="about-us" class="about py-24 md:py-32 bg-light relative">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 fade-in" data-aos="fade-right" data-aos-duration="1000">
+            <span class="inline-block text-primary font-medium tracking-wider mb-3">TENTANG KAMI</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-8 leading-tight text-reveal">
+              Danantara <span class="text-primary">Indonesia</span>
+            </h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+              Badan Pengelola Investasi Daya Anagata Nusantara (Danantara Indonesia) adalah badan pengelola
+              investasi strategis yang mengonsolidasikan dan mengoptimalkan investasi pemerintah untuk mendukung
+              pertumbuhan ekonomi nasional.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              <strong>Nama "Daya Anagata Nusantara"</strong> diberikan langsung oleh Presiden Prabowo
+              Subianto. "Daya" berarti energi, "Anagata" berarti masa depan, dan "Nusantara" merujuk pada Negara
+              Kesatuan Republik Indonesia, yang secara keseluruhan mencerminkan kekuatan dan potensi masa depan
+              Indonesia.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 relative fade-in" data-aos="fade-left">
+            <div class="about__image-container">
+              <div class="about__image-outline"></div>
+              <div class="about__image">
+                <img src="assets/danantara-building-trademark.png" alt="Danantara Building"
+                  class="rounded-lg shadow-2xl">
+              </div>
+              <div class="about__card">
+                <p>
+                  Danantara Indonesia berkomitmen untuk meningkatkan efisiensi aset, menarik investasi global, dan
+                  memperkuat daya saing Indonesia di sektor strategis, sehingga menciptakan kemakmuran yang merata bagi
+                  seluruh rakyat Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute -bottom-6 left-0 w-full overflow-hidden leading-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"
+          class="h-24 w-full fill-white">
+          <path d="M1200 120L0 0 0 120z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="journey"
+      class="journey py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-secondary to-dark text-white">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          <div class="lg:col-span-7 fade-in" data-aos="fade-right">
+            <div class="journey__image-container overflow-hidden rounded-xl">
+              <img src="assets/building-flag-indo.png" alt="Building with Indonesian Flag"
+                class="w-full journey__image">
+              <div class="journey__overlay"></div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 fade-in" data-aos="fade-left">
+            <span class="inline-block text-primary font-medium tracking-wider mb-3">PERJALANAN</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">
+              Menggapai <span class="text-primary">Kemakmuran</span> Indonesia
+            </h2>
+
+            <div class="journey__card" data-aos="fade-up" data-aos-delay="200">
+              <div class="journey__card-content">
+                <p class="text-lg leading-relaxed text-gray-100">
+                  Setiap aset dan sumber daya negara harus dikelola secara efektif dan tepat sasaran agar manfaatnya
+                  dapat
+                  langsung dirasakan oleh seluruh rakyat Indonesia, sesuai dengan upaya mengoptimalkan pengamalan mandat
+                  Pasal 33 Ayat 3 Undang Undang Dasar 1945 serta Misi Asta Cita terkait pengelolaan kekayaan negara.
+                </p>
+              </div>
+              <div class="journey__card-line"></div>
+            </div>
+
+            <div class="mt-10">
+              <a href="#visi-misi" class="btn-secondary">
+                <span>Lihat Visi & Misi</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-0 right-0 w-1/3 h-1/3 bg-primary opacity-10 rounded-bl-full"></div>
+      <div class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-primary opacity-10 rounded-tr-full"></div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-light relative overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          <div class="lg:col-span-5 relative fade-in" data-aos="fade-right">
+            <div class="quote__image-container" data-aos="fade-right">
+              <img src="assets/president-prabowo.png" alt="Presiden Prabowo"
+                class="w-full rounded-xl shadow-xl quote__image">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
+              <div class="quote__attribution">
+                <span>Presiden Prabowo Subianto</span>
+                <span class="text-sm opacity-75">Sidang Paripurna MPR RI - Pelantikan Presiden 2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 fade-in" data-aos="fade-left">
+            <div class="quote__container">
+              <div class="quote__mark quote__mark--opening">"</div>
+              <div class="quote__content">
+                <blockquote
+                  class="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-gray-900 leading-tight quote__text">
+                  Semua kekayaan kita harus sebesar-besarnya untuk kepentingan dan kemakmuran rakyat kita (rakyat
+                  Indonesia).
+                </blockquote>
+              </div>
+              <div class="quote__mark quote__mark--closing">"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute top-0 right-0 h-96 w-96 bg-primary opacity-5 rounded-full transform translate-x-1/2 -translate-y-1/2">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 h-64 w-64 bg-primary opacity-5 rounded-full transform -translate-x-1/2 translate-y-1/2">
+      </div>
+    </section>
+
+    <section id="visi-misi" class="vision-mission py-24 md:py-32 bg-white overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-16 items-center mb-16 md:mb-32">
+          <div class="lg:col-span-5 fade-in" data-aos="fade-right">
+            <span class="inline-block text-primary font-medium tracking-wider mb-3">VISI</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-8 leading-tight">
+              Visi <span class="text-primary">Danantara</span>
+            </h2>
+
+            <div class="vision__card" data-aos="fade-up" data-aos-delay="200">
+              <p class="text-lg text-gray-700 leading-relaxed">
+                Sebagai pengelola investasi terkemuka, di mana BUMN strategis akan menjadi <i>enabler</i> penempatan
+                investasinya, Danantara Indonesia mendorong transformasi ekonomi Indonesia dengan menumbuhkan badan
+                <i>Sovereign Wealth Fund</i> berskala dunia, mendukung pembangunan nasional dan menciptakan kemakmuran
+                bagi seluruh rakyat Indonesia.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 relative vision__image-wrapper fade-in" data-aos="fade-left">
+            <img src="assets/bridge-illustration.png" alt="Bridge Illustration"
+              class="w-full h-auto rounded-xl shadow-xl vision__image">
+            <div class="vision__image-accent"></div>
+          </div>
+        </div>
+
+        <div class="mission">
+          <div class="text-center mb-12">
+            <span class="inline-block text-primary font-medium tracking-wider mb-3">MISI</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 leading-tight">
+              Misi <span class="text-primary">Danantara</span>
+            </h2>
+          </div>
+
+          <div class="mission__container relative">
+            <div class="mission__bg-container rounded-xl overflow-hidden shadow-xl mb-10 fade-in" data-aos="fade-up">
+              <img src="assets/landscape-illustration.png" alt="Landscape Illustration"
+                class="w-full h-auto object-cover rounded-xl mission__bg-image">
+              <div class="mission__image-accent"></div>
+            </div>
+
+            <div class="mission__slider fade-in" data-aos="fade-up" data-aos-delay="200">
+              <div class="swiper-container mission__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="mission__card">
+                      <div class="mission__card-number">01</div>
+                      <div class="mission__card-content">
+                        <p class="text-gray-700 leading-relaxed">
+                          Mengelola kekayaan negara secara profesional, transparan, dan berkelanjutan sesuai dengan
+                          prinsip good governance untuk mendorong kesejahteraan rakyat, sebagaimana diamanatkan dalam
+                          Pasal 33 Ayat 3 UUD 1945 dan misi Asta Cita.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="mission__card">
+                      <div class="mission__card-number">02</div>
+                      <div class="mission__card-content">
+                        <p class="text-gray-700 leading-relaxed">
+                          Memperkuat peran sebagai katalisator untuk menarik investasi asing dan mendorong pertumbuhan
+                          ekonomi yang berkelanjutan melalui kolaborasi dengan BUMN dan swasta.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="mission__card">
+                      <div class="mission__card-number">03</div>
+                      <div class="mission__card-content">
+                        <p class="text-gray-700 leading-relaxed">
+                          Membangun kapasitas operasional yang tangguh untuk mengoptimalkan pengelolaan aset dan
+                          investasi
+                          strategis nasional.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mission__navigation">
+                  <div class="mission__pagination"></div>
+                  <div class="mission__nav-buttons">
+                    <button class="mission__btn-prev" aria-label="Previous Mission">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6"></path>
+                      </svg>
+                    </button>
+                    <button class="mission__btn-next" aria-label="Next Mission">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta py-24 md:py-32 bg-primary">
+      <div class="container mx-auto px-6 text-center text-white">
+        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight no-hover-color-change fade-in"
+          data-aos="fade-up" data-aos-delay="100">
+          Bersama-sama untuk <span class="text-yellow-300">Indonesia</span> yang lebih sejahtera
+        </h2>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto mb-12 fade-in" data-aos="fade-up" data-aos-delay="200">
+          Danantara Indonesia hadir untuk mendorong transformasi ekonomi dengan pendekatan profesional dan menerapkan
+          good governance.
+        </p>
+        <a href="#footer" class="cta__btn group fade-in" data-aos="fade-up" data-aos-delay="400">
+          <span>Hubungi Kami</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="transform group-hover:translate-x-1 transition-transform">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer bg-secondary text-white pt-20 pb-10">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <div class="md:col-span-5">
+          <img src="assets/danantara-logo-black-v2.png" alt="Danantara Logo" class="mb-6 footer__logo">
+          <p class="text-gray-400 mb-6">
+            Badan Pengelola Investasi Daya Anagata Nusantara (Danantara Indonesia) adalah badan pengelola investasi
+            strategis yang mengonsolidasikan dan mengoptimalkan investasi pemerintah.
+          </p>
+          <div class="flex items-center space-x-4">
+            <a href="#" class="footer__social-link text-gray-400 hover:text-white transition-colors"
+              aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link text-gray-400 hover:text-white transition-colors"
+              aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link text-gray-400 hover:text-white transition-colors"
+              aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="md:col-span-4">
+          <h3 class="text-xl font-bold mb-6">Hubungi Kami</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="mt-1 mr-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <p class="text-gray-400">
+                Danantara Indonesia Sentra Mandiri<br>
+                Jl. R.P. Soeroso No.2-4 Jakarta Pusat, 10330, Indonesia
+              </p>
+            </div>
+            <div class="flex items-start">
+              <div class="mt-1 mr-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <a href="mailto:contact@danantaraindonesia.com"
+                class="footer__nav-link text-gray-400 hover:text-white transition-colors">
+                contact@danantaraindonesia.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <h3 class="text-xl font-bold mb-6">Navigasi Cepat</h3>
+          <ul class="space-y-3">
+            <li><a href="#about-us" class="footer__nav-link text-gray-400 hover:text-white transition-colors">Tentang
+                Kami</a></li>
+            <li><a href="#journey"
+                class="footer__nav-link text-gray-400 hover:text-white transition-colors">Perjalanan</a></li>
+            <li><a href="#visi-misi" class="footer__nav-link text-gray-400 hover:text-white transition-colors">Visi &
+                Misi</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-12 pt-8 text-gray-500 text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div>
+            <p>© 2025 Badan Pengelola Investasi Daya Anagata Nusantara (Danantara Indonesia)</p>
+            <p>Website redesigned by Ben</p>
+          </div>
+          <div class="mt-4 md:mt-0 flex items-center">
+            <a href="#" class="footer__nav-link mr-6 hover:text-white transition-colors">Kebijakan Privasi</a>
+            <a href="#" class="footer__nav-link hover:text-white transition-colors">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"></path>
+      </svg>
+    </button>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
