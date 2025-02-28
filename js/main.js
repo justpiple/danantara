@@ -727,11 +727,11 @@ function initLenis() {
 function initAnimation() {
   if (window.AOS) {
     AOS.init({
-      duration: 800,
+      duration: 1200,
       easing: "ease-out-cubic",
       once: false,
       mirror: true,
-      offset: 100,
+      offset: 150,
     });
   }
 }
